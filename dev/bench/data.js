@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636392824790,
+  "lastUpdate": 1636397166611,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -116,6 +116,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 377.781,
             "range": "± 48.0308",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "51ad42064fa5153bdd2cf7428e5fb74df7ae995e",
+          "message": "CXXCBC-25: keep scope and collection separate in document_id (#36)",
+          "timestamp": "2021-11-08T18:26:02Z",
+          "tree_id": "c46363b243420e50dad44b3d20596b6d14762d65",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/51ad42064fa5153bdd2cf7428e5fb74df7ae995e"
+        },
+        "date": 1636397165955,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 579.897,
+            "range": "± 644.496",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
