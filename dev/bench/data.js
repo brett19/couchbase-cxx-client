@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636397178404,
+  "lastUpdate": 1636398565654,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -178,6 +178,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 579.897,
             "range": "± 644.496",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "04a826d7711b7353eec1254c0f92d5479138f803",
+          "message": "represent CAS as type instead of std::uint64_t (#35)",
+          "timestamp": "2021-11-08T18:53:33Z",
+          "tree_id": "ceccd1f4a16b423ecee69aedfd1761c47934f0cd",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/04a826d7711b7353eec1254c0f92d5479138f803"
+        },
+        "date": 1636398565047,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 407.177,
+            "range": "± 727.165",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
