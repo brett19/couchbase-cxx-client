@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636398592468,
+  "lastUpdate": 1636568075011,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -240,6 +240,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 407.177,
             "range": "± 727.165",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0aae6af8c075961141fa10deaa8653f5f111ba75",
+          "message": "restructuring test helpers (#40)\n\n* Add integration test helper class\r\n\r\nAdd a helper class that correctly cleans up asio on tear down. When using sections this prevents a single test failure skipping tests defined in later sections\r\n\r\n* restructure test helpers\r\n\r\nCo-authored-by: Jake Rawsthorne <jake.rawsthorne@couchbase.com>",
+          "timestamp": "2021-11-10T17:58:43Z",
+          "tree_id": "3870453934af81995959f7546b82ba414f5f5671",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/0aae6af8c075961141fa10deaa8653f5f111ba75"
+        },
+        "date": 1636568074300,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 361.859,
+            "range": "± 128.897",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
