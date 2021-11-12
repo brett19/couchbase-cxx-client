@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636732818868,
+  "lastUpdate": 1636732874582,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -211,6 +211,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 335.497,
             "range": "± 43.621",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "519f6dd1661156011f6d6204e1e024c884b67822",
+          "message": "Fix flaky bucket management test (#41)\n\nAdd test helpers that wait for an arbitrary condition\r\nAdd test helper that waits for a bucket to become healthy",
+          "timestamp": "2021-11-12T15:41:26Z",
+          "tree_id": "450ae34accca2233b3a5ccccb6d60a5349d2dba2",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/519f6dd1661156011f6d6204e1e024c884b67822"
+        },
+        "date": 1636732873420,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 510.521,
+            "range": "± 279.924",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
