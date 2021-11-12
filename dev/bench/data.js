@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636732874582,
+  "lastUpdate": 1636732875987,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -457,6 +457,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 476.827,
             "range": "± 96.0022",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ca933ba3375e8cf9cbf0a0ae72f6059fe88a259a",
+          "message": "SDKQE-2482: Port arithmetic integration tests from lcb (#42)",
+          "timestamp": "2021-11-12T15:40:11Z",
+          "tree_id": "96455c35f20949987b1ae82e53cdbcbd3cc4fb60",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/ca933ba3375e8cf9cbf0a0ae72f6059fe88a259a"
+        },
+        "date": 1636732875074,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 522.283,
+            "range": "± 158.91",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
