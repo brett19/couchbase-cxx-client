@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636983823805,
+  "lastUpdate": 1636983953100,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -643,6 +643,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 354.131,
             "range": "± 75.4292",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e3c0d9beb7b45ae550e3b355ee8a1a8a174d7758",
+          "message": "SDKQE-2484: Port CRUD tests from libcouchbase (#44)\n\n* display test output on failure\r\n* implement shortcut check for exists_response\r\n* port mutation integration tests from lcb\r\n\r\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2021-11-15T13:26:40Z",
+          "tree_id": "3cd2d2e8ec0c04f612f4dbf4d2d142b933fffffe",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/e3c0d9beb7b45ae550e3b355ee8a1a8a174d7758"
+        },
+        "date": 1636983952074,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 496.393,
+            "range": "± 630.163",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
