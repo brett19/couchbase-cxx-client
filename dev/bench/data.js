@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636975306871,
+  "lastUpdate": 1636975356849,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -581,6 +581,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 439.271,
             "range": "± 574.369",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d067614d62dc20a9673dbe8d175b307cdd08bc9a",
+          "message": "add missing header (#46)\n\ngcc 11 complains that <optional> is not included yet in\r\nconfiguration.hxx",
+          "timestamp": "2021-11-15T11:04:56Z",
+          "tree_id": "8af04398e8dc03818857a5d2da2bf054d2e96ce7",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/d067614d62dc20a9673dbe8d175b307cdd08bc9a"
+        },
+        "date": 1636975356240,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 354.131,
+            "range": "± 75.4292",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
