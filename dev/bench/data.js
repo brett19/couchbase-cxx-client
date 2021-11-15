@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1636985544864,
+  "lastUpdate": 1637000613602,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -736,6 +736,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 556.622,
             "range": "± 209.181",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0b9a9bbca9f98c37ba70122f1fd3d33c1f9351f6",
+          "message": "CXXCBC-28: switch exists operation to get_meta (#49)",
+          "timestamp": "2021-11-15T18:06:19Z",
+          "tree_id": "20787e4a341e4f826c6b5492ce511a36731d44cf",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/0b9a9bbca9f98c37ba70122f1fd3d33c1f9351f6"
+        },
+        "date": 1637000612311,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 352.396,
+            "range": "± 59.8123",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
