@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637000620894,
+  "lastUpdate": 1637172914511,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -798,6 +798,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 352.396,
             "range": "± 59.8123",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a43d22ff519f4f62ad2c3f85d9122db96acaefa8",
+          "message": "fix move semantics for handlers (#45)\n\nin particular, allow to use lambdas that capture move-only objects as\r\noperation handlers",
+          "timestamp": "2021-11-17T17:56:24Z",
+          "tree_id": "019754ba279318fdf592e79d54218a799aa92255",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/a43d22ff519f4f62ad2c3f85d9122db96acaefa8"
+        },
+        "date": 1637172913324,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 507.206,
+            "range": "± 691.485",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
