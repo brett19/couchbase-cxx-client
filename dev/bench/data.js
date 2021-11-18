@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637173083051,
+  "lastUpdate": 1637262169056,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -428,6 +428,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 516.285,
             "range": "± 272.43",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1128790d371b9aefd047ca08de603a64daf16ead",
+          "message": "SDKQE-2483: Port collections tests from lcb (#43)\n\n* SDKQE-2483: Port collections tests from lcb\r\n* update retry reasons of the original request when collection is missing\r\n\r\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2021-11-18T18:42:50Z",
+          "tree_id": "e03b2ac62c67763215a3e6576a52262988b3bfc0",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/1128790d371b9aefd047ca08de603a64daf16ead"
+        },
+        "date": 1637262167976,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 491.943,
+            "range": "± 599.25",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
