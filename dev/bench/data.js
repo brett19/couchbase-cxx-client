@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637354260471,
+  "lastUpdate": 1637354509052,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -552,6 +552,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 677.825,
             "range": "± 789.573",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ffe4b3ad172dd47920eece4bd58f1f3162453afa",
+          "message": "SDKQE-2489: Port subdoc tests from lcb (#51)\n\n* SDKQE-2489: Port subdoc tests from lcb\r\n\r\n* detect empty paths and swap op codes for full doc operations\r\n\r\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2021-11-19T20:19:30Z",
+          "tree_id": "4e4448743f70794e17b340ba7686b41a5d0abd0f",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/ffe4b3ad172dd47920eece4bd58f1f3162453afa"
+        },
+        "date": 1637354507984,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 662.733,
+            "range": "± 1.2967",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
