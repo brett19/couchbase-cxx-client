@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637262311277,
+  "lastUpdate": 1637347757764,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -922,6 +922,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 491.6,
             "range": "± 242.994",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3eb2d3d2d3d9f171c74ae7117362a995f39ce33d",
+          "message": "explicitly assign values to errors (#54)\n\n1. RFC has these codes specified, so it would be better if we use them,\r\n   because our errors are basically numeric values.\r\n\r\n2. Output operator for std::error_code uses bare integer value instead\r\n   of message, and it will be easier to search for codes in the sources.",
+          "timestamp": "2021-11-19T18:28:59Z",
+          "tree_id": "ccca2e8691a57c25f2e54ab7c7d52c6414160ecb",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/3eb2d3d2d3d9f171c74ae7117362a995f39ce33d"
+        },
+        "date": 1637347756616,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 441.306,
+            "range": "± 74.4981",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
