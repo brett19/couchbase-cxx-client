@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637347757764,
+  "lastUpdate": 1637347848238,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -953,6 +953,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 441.306,
             "range": "± 74.4981",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "470f8f136961bd06e13a0b46f883cc1c92a47731",
+          "message": "SDKQE-2487: Port N1QL query tests from lcb (#50)\n\n* SDKQE-2487: Port N1QL query tests from lcb\r\n\r\n* Capture debug logs during ci\r\n\r\n* log reponse body on unexpected error from query engine\r\n\r\n* switch sanitizers on github actions to server 7.0.2\r\n\r\n* use multi-threaded logger for stderr in the tests\r\n\r\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2021-11-19T18:28:42Z",
+          "tree_id": "f2947419edd80a44353c3d3ada4bd7859b45608d",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/470f8f136961bd06e13a0b46f883cc1c92a47731"
+        },
+        "date": 1637347847134,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 598.499,
+            "range": "± 784.265",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
