@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637697366369,
+  "lastUpdate": 1637697438848,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1387,6 +1387,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 890.701,
             "range": "± 1.67716",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c997ec0ffed3da7a77c667f758af2fb971cd2b8b",
+          "message": "add more overloads for JSON parser wrapper (#60)",
+          "timestamp": "2021-11-23T19:36:35Z",
+          "tree_id": "11498f8c3cd8fbcffd06299b9cfeadecd88964d6",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/c997ec0ffed3da7a77c667f758af2fb971cd2b8b"
+        },
+        "date": 1637697437638,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 422.98,
+            "range": "± 73.7437",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
