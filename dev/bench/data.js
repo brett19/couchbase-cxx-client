@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637693065158,
+  "lastUpdate": 1637693214091,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1263,6 +1263,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 409.082,
             "range": "± 1.00286",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "fa3d5eb24643fb2488e7345fa1e7e12f8ddf7f42",
+          "message": "SDKQE-2495: Temporarily add sleep after scope and collection changes (#55)\n\nThe collection manifest can be partially propagated in a multi node cluster. Until all nodes can be checked, add a sleep after create/drop",
+          "timestamp": "2021-11-23T18:22:44Z",
+          "tree_id": "8a510a19214f953af6dbf5ac56eafd5f5d8e9d70",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/fa3d5eb24643fb2488e7345fa1e7e12f8ddf7f42"
+        },
+        "date": 1637693213373,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 542.368,
+            "range": "± 212.791",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
