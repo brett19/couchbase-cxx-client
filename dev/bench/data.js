@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637354509052,
+  "lastUpdate": 1637692799093,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -583,6 +583,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 662.733,
             "range": "± 1.2967",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "03931a60269ae76a56c1fab94dece8ee51013471",
+          "message": "SDKQE-2496: Add collection management test (#57)",
+          "timestamp": "2021-11-23T18:23:25Z",
+          "tree_id": "d3f0f8fe2ca9dfbaa4cd72bdf721c6b4c1ba6a6f",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/03931a60269ae76a56c1fab94dece8ee51013471"
+        },
+        "date": 1637692797917,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 481.061,
+            "range": "± 886.356",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
