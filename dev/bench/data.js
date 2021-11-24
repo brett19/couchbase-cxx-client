@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637784286932,
+  "lastUpdate": 1637786574679,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1480,6 +1480,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 491.803,
             "range": "± 93.1176",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "025f8f27f7772cb93269cb5e4d24149e49cc1551",
+          "message": "fix snappy compression of the value (#62)\n\nWhen the value was compressed, the body length and datatype fields were\r\nnot updated because of non-reference argument. The patch improves API a\r\nbit, and modification of the packet done by the caller now.",
+          "timestamp": "2021-11-24T20:24:30Z",
+          "tree_id": "5ea50e28c8f0988db83ee2d7a8d9906ce0ccf67b",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/025f8f27f7772cb93269cb5e4d24149e49cc1551"
+        },
+        "date": 1637786574049,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 331.041,
+            "range": "± 58.7128",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
