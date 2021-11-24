@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637784247530,
+  "lastUpdate": 1637784286932,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -707,6 +707,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 389.957,
             "range": "± 105.243",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c101b7235b71684a1a1631d14fca95c6281a93f8",
+          "message": "SDKQE-2497: Add user management tests (#58)\n\n* CXXCBC-20: Fix group_get_all returning internal_server_failure\r\n\r\n* CXXCBC-33: Fix auth domain formatting in request path\r\n\r\n* SDKQE-2497: Add user management tests",
+          "timestamp": "2021-11-24T19:41:54Z",
+          "tree_id": "ecc6aaf58a1a9e3ae02fe20ee6a7b0df415d0d4f",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/c101b7235b71684a1a1631d14fca95c6281a93f8"
+        },
+        "date": 1637784285684,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 644.139,
+            "range": "± 712.563",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
