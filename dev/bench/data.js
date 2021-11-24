@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637786593122,
+  "lastUpdate": 1637786637567,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1542,6 +1542,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 331.041,
             "range": "± 58.7128",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9c436d9837d6591b074091a2d7086df735bd4e70",
+          "message": " SDKQE-2499: Add query index management tests (#61)\n\n* Fix error code for index not found\r\n\r\n* SDKQE-2499: Add query index management tests\r\n\r\n* Use raw strings in queries instead of escaping\r\n\r\n* fix comment on the error code\r\n\r\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2021-11-24T20:24:57Z",
+          "tree_id": "42fa53015606775ee9f3ef621a8fb351d40b8515",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/9c436d9837d6591b074091a2d7086df735bd4e70"
+        },
+        "date": 1637786636332,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 370.421,
+            "range": "± 70.6457",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
