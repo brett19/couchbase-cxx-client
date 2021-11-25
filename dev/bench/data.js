@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637858049995,
+  "lastUpdate": 1637858078632,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1635,6 +1635,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 370.421,
             "range": "± 70.6457",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c1f50427b547ef375e29637b12b293878c3db970",
+          "message": "SDKQE-2474: Expand bucket management integration tests (#56)\n\n* CXXCBC-21: Fix error message when flushing a bucket with flush disabled\r\n\r\n* CXXCBC-23: Fix create memcached bucket\r\n\r\n* CXXCBC-24: Fix create ephemeral bucket\r\n\r\n* SDKQE-2474: Expand bucket management integration tests\r\n\r\n* fix memory leak associated with restarting MCBP session\r\n\r\n* fix session restart\r\n* introduce close_bucket API to stop background session reconnection\r\n* fixed memory leak\r\n\r\n* fix issue found by thread sanitizer\r\n\r\n* fix TODO item about getting number of nodes from the cluster\r\n\r\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2021-11-25T16:15:07Z",
+          "tree_id": "8f1bfa8d01f5b6db66f9daa083bc376681a3a4f2",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/c1f50427b547ef375e29637b12b293878c3db970"
+        },
+        "date": 1637858077339,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 371.447,
+            "range": "± 58.6647",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
