@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637858078632,
+  "lastUpdate": 1637912094401,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1666,6 +1666,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 371.447,
             "range": "± 58.6647",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "77faff6803212303017a27b4d09a47815a5be765",
+          "message": "use mutex lock when using buckets map (#52)",
+          "timestamp": "2021-11-26T07:17:38Z",
+          "tree_id": "31184f08ff1a134ddee8b35ad99eeb8c043c8d2e",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/77faff6803212303017a27b4d09a47815a5be765"
+        },
+        "date": 1637912093213,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 356.629,
+            "range": "± 392.2",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
