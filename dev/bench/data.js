@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637912205300,
+  "lastUpdate": 1638208350218,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1728,6 +1728,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 356.629,
             "range": "± 392.2",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "7a9cc37a8c373f52bde9e50b7f573b0cb1242351",
+          "message": "CXXCBC-47: improve client side error message when TLS is enforced on the server side (#63)",
+          "timestamp": "2021-11-29T17:33:10Z",
+          "tree_id": "c2869b261b3cdb86d8ee04b0c2fe3aff60a583f1",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/7a9cc37a8c373f52bde9e50b7f573b0cb1242351"
+        },
+        "date": 1638208348937,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 398.395,
+            "range": "± 260.634",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
