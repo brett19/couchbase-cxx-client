@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638213951397,
+  "lastUpdate": 1638214066177,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -893,6 +893,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 489.043,
             "range": "± 291.711",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c747dda909e289ed9266347c1b3e83c02b9c2cf0",
+          "message": "tests: try to detect cluster version using REST API (#66)\n\nfallback to version from environment only if the cluster does not agree\r\non version or returns invalid version string",
+          "timestamp": "2021-11-29T19:07:48Z",
+          "tree_id": "1b5f347be8448dd901cc1173b202df4304ead457",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/c747dda909e289ed9266347c1b3e83c02b9c2cf0"
+        },
+        "date": 1638214064794,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 396.409,
+            "range": "± 335.615",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
