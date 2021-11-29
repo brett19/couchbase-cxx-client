@@ -17,7 +17,7 @@
 
 #pragma once
 
-#include <spdlog/fmt/fmt.h>
+#include <spdlog/fmt/bundled/core.h>
 
 namespace couchbase
 {
@@ -45,7 +45,7 @@ enum class cluster_capability {
 } // namespace couchbase
 
 template<>
-struct fmt::formatter<couchbase::bucket_capability> : formatter<std::string_view> {
+struct fmt::formatter<couchbase::bucket_capability> : formatter<string_view> {
     template<typename FormatContext>
     auto format(couchbase::bucket_capability type, FormatContext& ctx)
     {
@@ -90,7 +90,7 @@ struct fmt::formatter<couchbase::bucket_capability> : formatter<std::string_view
 };
 
 template<>
-struct fmt::formatter<couchbase::cluster_capability> : formatter<std::string_view> {
+struct fmt::formatter<couchbase::cluster_capability> : formatter<string_view> {
     template<typename FormatContext>
     auto format(couchbase::cluster_capability type, FormatContext& ctx)
     {

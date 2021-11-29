@@ -17,16 +17,21 @@
 
 #pragma once
 
-#include <couchbase/protocol/mutation_token.hxx>
-
+#include <couchbase/protocol/enhanced_error_info.hxx>
 #include <spdlog/fmt/bundled/core.h>
 
 template<>
-struct fmt::formatter<couchbase::mutation_token> : formatter<string_view> {
+struct fmt::formatter<couchbase::protocol::enhanced_error_info> : formatter<string_view> {
     template<typename FormatContext>
-    auto format(const couchbase::mutation_token& token, FormatContext& ctx)
+    auto format(const couchbase::protocol::enhanced_error_info& error, FormatContext& ctx)
     {
-        return formatter<string_view>::format(
-          fmt::format("{}:{}:{}:{}", token.bucket_name, token.partition_id, token.partition_uuid, token.sequence_number), ctx);
+        if (!error.reference.empty() && !error.context.empty()) {
+            return formatter<string_view>::format(fmt::format(R"((ref: "{}", ctx: "{}"))", error.reference, error.context), ctx);
+        } else if (!error.reference.empty()) {
+            return formatter<string_view>::format(fmt::format(R"((ref: "{}"))", error.reference), ctx);
+        } else if (!error.context.empty()) {
+            return formatter<string_view>::format(fmt::format(R"((ctx: "{}"))", error.context), ctx);
+        }
+        return formatter<string_view>::format("", ctx);
     }
 };

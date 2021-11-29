@@ -17,6 +17,8 @@
 
 #pragma once
 
+#include <spdlog/fmt/bundled/core.h>
+
 namespace couchbase::operations
 {
 struct design_document {

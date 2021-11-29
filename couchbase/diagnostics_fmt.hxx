@@ -19,10 +19,10 @@
 
 #include <couchbase/diagnostics.hxx>
 
-#include <spdlog/fmt/fmt.h>
+#include <spdlog/fmt/bundled/core.h>
 
 template<>
-struct fmt::formatter<couchbase::diag::cluster_state> : formatter<std::string_view> {
+struct fmt::formatter<couchbase::diag::cluster_state> : formatter<string_view> {
     template<typename FormatContext>
     auto format(couchbase::diag::cluster_state state, FormatContext& ctx)
     {
@@ -45,7 +45,7 @@ struct fmt::formatter<couchbase::diag::cluster_state> : formatter<std::string_vi
 };
 
 template<>
-struct fmt::formatter<couchbase::diag::endpoint_state> : formatter<std::string_view> {
+struct fmt::formatter<couchbase::diag::endpoint_state> : formatter<string_view> {
     template<typename FormatContext>
     auto format(couchbase::diag::endpoint_state state, FormatContext& ctx)
     {
@@ -72,7 +72,7 @@ struct fmt::formatter<couchbase::diag::endpoint_state> : formatter<std::string_v
 };
 
 template<>
-struct fmt::formatter<couchbase::diag::ping_state> : formatter<std::string_view> {
+struct fmt::formatter<couchbase::diag::ping_state> : formatter<string_view> {
     template<typename FormatContext>
     auto format(couchbase::diag::ping_state state, FormatContext& ctx)
     {

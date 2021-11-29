@@ -21,13 +21,15 @@
 #include <optional>
 #include <set>
 #include <vector>
+#include <string>
 
-#include <spdlog/fmt/fmt.h>
+#include <spdlog/fmt/bundled/core.h>
 
 #include <couchbase/topology/capabilities.hxx>
 #include <couchbase/platform/uuid.h>
 #include <couchbase/service_type.hxx>
 #include <couchbase/utils/crc32.hxx>
+#include <couchbase/utils/join_strings.hxx>
 
 namespace couchbase::topology
 {
@@ -118,7 +120,7 @@ make_blank_configuration(const std::string& hostname, std::uint16_t plain_port, 
 } // namespace couchbase::topology
 
 template<>
-struct fmt::formatter<couchbase::topology::configuration::node> : formatter<std::string> {
+struct fmt::formatter<couchbase::topology::configuration::node> : formatter<string_view> {
     template<typename FormatContext>
     auto format(const couchbase::topology::configuration::node& node, FormatContext& ctx)
     {
@@ -186,7 +188,7 @@ struct fmt::formatter<couchbase::topology::configuration::node> : formatter<std:
                         ports.push_back(fmt::format("capi={}", *entry.second.services_plain.views));
                     }
                     if (!ports.empty()) {
-                        network += fmt::format(", plain=({})", fmt::join(ports, ","));
+                        network += fmt::format(", plain=({})", couchbase::utils::join_strings(ports, ","));
                     }
                 }
                 {
@@ -210,40 +212,39 @@ struct fmt::formatter<couchbase::topology::configuration::node> : formatter<std:
                         ports.push_back(fmt::format("capi={}", *entry.second.services_tls.views));
                     }
                     if (!ports.empty()) {
-                        network += fmt::format(", tls=({})", fmt::join(ports, ","));
+                        network += fmt::format(", tls=({})", couchbase::utils::join_strings(ports, ","));
                     }
                 }
                 alternate_addresses.emplace_back(network);
             }
         }
-        format_to(ctx.out(),
-                  R"(#<node:{} hostname="{}", plain=({}), tls=({}), alt=[{}]>)",
-                  node.index,
-                  node.hostname,
-                  fmt::join(plain, ", "),
-                  fmt::join(tls, ", "),
-                  fmt::join(alternate_addresses, ", "));
-        return formatter<std::string>::format("", ctx);
+        return formatter<string_view>::format(fmt::format(R"(#<node:{} hostname="{}", plain=({}), tls=({}), alt=[{}]>)",
+                                                          node.index,
+                                                          node.hostname,
+                                                          couchbase::utils::join_strings(plain, ", "),
+                                                          couchbase::utils::join_strings(tls, ", "),
+                                                          couchbase::utils::join_strings(alternate_addresses, ", ")),
+                                              ctx);
     }
 };
 
 template<>
-struct fmt::formatter<couchbase::topology::configuration> : formatter<std::string> {
+struct fmt::formatter<couchbase::topology::configuration> : formatter<string_view> {
     template<typename FormatContext>
     auto format(const couchbase::topology::configuration& config, FormatContext& ctx)
     {
-        format_to(ctx.out(),
-                  R"(#<config:{} rev={}{}{}{}{}, nodes({})=[{}], bucket_caps=[{}], cluster_caps=[{}]>)",
-                  couchbase::uuid::to_string(config.id),
-                  config.rev_str(),
-                  config.uuid ? fmt::format(", uuid={}", *config.uuid) : "",
-                  config.bucket ? fmt::format(", bucket={}", *config.bucket) : "",
-                  config.num_replicas ? fmt::format(", replicas={}", *config.num_replicas) : "",
-                  config.vbmap.has_value() ? fmt::format(", partitions={}", config.vbmap->size()) : "",
-                  config.nodes.size(),
-                  fmt::join(config.nodes, ", "),
-                  fmt::join(config.bucket_capabilities, ", "),
-                  fmt::join(config.cluster_capabilities, ", "));
-        return formatter<std::string>::format("", ctx);
+        return formatter<string_view>::format(
+          fmt::format(R"(#<config:{} rev={}{}{}{}{}, nodes({})=[{}], bucket_caps=[{}], cluster_caps=[{}]>)",
+                      couchbase::uuid::to_string(config.id),
+                      config.rev_str(),
+                      config.uuid ? fmt::format(", uuid={}", *config.uuid) : "",
+                      config.bucket ? fmt::format(", bucket={}", *config.bucket) : "",
+                      config.num_replicas ? fmt::format(", replicas={}", *config.num_replicas) : "",
+                      config.vbmap.has_value() ? fmt::format(", partitions={}", config.vbmap->size()) : "",
+                      config.nodes.size(),
+                      couchbase::utils::join_strings_fmt("{}", config.nodes, ", "),
+                      couchbase::utils::join_strings_fmt("{}", config.bucket_capabilities, ", "),
+                      couchbase::utils::join_strings_fmt("{}", config.cluster_capabilities, ", ")),
+          ctx);
     }
 };

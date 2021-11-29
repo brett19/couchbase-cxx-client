@@ -21,10 +21,11 @@
 
 #include <couchbase/topology/collections_manifest.hxx>
 
-#include <spdlog/fmt/fmt.h>
+#include <spdlog/fmt/bundled/core.h>
+#include <couchbase/utils/join_strings.hxx>
 
 template<>
-struct fmt::formatter<couchbase::topology::collections_manifest> : formatter<std::string> {
+struct fmt::formatter<couchbase::topology::collections_manifest> : formatter<string_view> {
     template<typename FormatContext>
     auto format(const couchbase::topology::collections_manifest& manifest, FormatContext& ctx)
     {
@@ -35,12 +36,11 @@ struct fmt::formatter<couchbase::topology::collections_manifest> : formatter<std
             }
         }
 
-        format_to(ctx.out(),
-                  R"(#<manifest:{} uid={}, collections({})=[{}]>)",
-                  couchbase::uuid::to_string(manifest.id),
-                  manifest.uid,
-                  collections.size(),
-                  fmt::join(collections, ", "));
-        return formatter<std::string>::format("", ctx);
+        return formatter<string_view>::format(fmt::format(R"(#<manifest:{} uid={}, collections({})=[{}]>)",
+                                                          couchbase::uuid::to_string(manifest.id),
+                                                          manifest.uid,
+                                                          collections.size(),
+                                                          utils::join_strings(collections, ", ")),
+                                              ctx);
     }
 };

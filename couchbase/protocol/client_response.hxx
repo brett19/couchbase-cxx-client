@@ -17,8 +17,12 @@
 
 #pragma once
 
-#include <gsl/assert>
+#include <cmath>
+#include <optional>
 #include <cstring>
+
+#include <gsl/assert>
+#include <spdlog/fmt/bundled/core.h>
 
 #include <couchbase/io/mcbp_message.hxx>
 #include <couchbase/protocol/cas.hxx>
@@ -27,6 +31,7 @@
 #include <couchbase/protocol/cmd_info.hxx>
 #include <couchbase/protocol/datatype.hxx>
 #include <couchbase/protocol/enhanced_error_info.hxx>
+#include <couchbase/protocol/enhanced_error_info_fmt.hxx>
 #include <couchbase/protocol/frame_info_id.hxx>
 #include <couchbase/protocol/magic.hxx>
 #include <couchbase/protocol/magic_fmt.hxx>
@@ -213,19 +218,3 @@ class client_response
     }
 };
 } // namespace couchbase::protocol
-
-template<>
-struct fmt::formatter<couchbase::protocol::enhanced_error_info> : formatter<std::string> {
-    template<typename FormatContext>
-    auto format(const couchbase::protocol::enhanced_error_info& error, FormatContext& ctx)
-    {
-        if (!error.reference.empty() && !error.context.empty()) {
-            format_to(ctx.out(), R"((ref: "{}", ctx: "{}"))", error.reference, error.context);
-        } else if (!error.reference.empty()) {
-            format_to(ctx.out(), R"((ref: "{}"))", error.reference);
-        } else if (!error.context.empty()) {
-            format_to(ctx.out(), R"((ctx: "{}"))", error.context);
-        }
-        return formatter<std::string>::format("", ctx);
-    }
-};

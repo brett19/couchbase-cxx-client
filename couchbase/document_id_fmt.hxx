@@ -19,14 +19,13 @@
 
 #include <couchbase/document_id.hxx>
 
-#include <spdlog/fmt/fmt.h>
+#include <spdlog/fmt/bundled/core.h>
 
 template<>
-struct fmt::formatter<couchbase::document_id> : formatter<std::string> {
+struct fmt::formatter<couchbase::document_id> : formatter<string_view> {
     template<typename FormatContext>
     auto format(const couchbase::document_id& id, FormatContext& ctx)
     {
-        format_to(ctx.out(), "{}/{}/{}", id.bucket(), id.collection_path(), id.key());
-        return formatter<std::string>::format("", ctx);
+        return formatter<string_view>::format(fmt::format("{}/{}/{}", id.bucket(), id.collection_path(), id.key()), ctx);
     }
 };

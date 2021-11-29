@@ -19,10 +19,10 @@
 
 #include <couchbase/service_type.hxx>
 
-#include <spdlog/fmt/fmt.h>
+#include <spdlog/fmt/bundled/core.h>
 
 template<>
-struct fmt::formatter<couchbase::service_type> : formatter<std::string_view> {
+struct fmt::formatter<couchbase::service_type> : formatter<string_view> {
     template<typename FormatContext>
     auto format(couchbase::service_type type, FormatContext& ctx)
     {

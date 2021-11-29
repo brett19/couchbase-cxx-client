@@ -19,14 +19,13 @@
 
 #include <couchbase/protocol/cas.hxx>
 
-#include <spdlog/fmt/fmt.h>
+#include <spdlog/fmt/bundled/core.h>
 
 template<>
-struct fmt::formatter<couchbase::protocol::cas> : formatter<std::string> {
+struct fmt::formatter<couchbase::protocol::cas> : formatter<string_view> {
     template<typename FormatContext>
     auto format(const couchbase::protocol::cas& cas, FormatContext& ctx)
     {
-        format_to(ctx.out(), "{:x}", cas.value);
-        return formatter<std::string>::format("", ctx);
+        return formatter<string_view>::format(fmt::format("{:x}", cas.value), ctx);
     }
 };
