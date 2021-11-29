@@ -20,8 +20,6 @@
 #include <utility>
 #include <cstring>
 
-#include <couchbase/utils/json.hxx>
-
 #include <asio.hpp>
 
 #include <couchbase/platform/uuid.h>
@@ -64,6 +62,9 @@
 
 namespace couchbase::io
 {
+
+std::string
+generate_user_agent(const std::string& client_id, const std::string& session_id);
 
 class mcbp_session : public std::enable_shared_from_this<mcbp_session>
 {
@@ -132,10 +133,6 @@ class mcbp_session : public std::enable_shared_from_this<mcbp_session>
                   [origin = session_->origin_]() { return origin.password(); },
                   session_->origin_.credentials().allowed_sasl_mechanisms)
         {
-            tao::json::value user_agent{
-                { "a", couchbase::meta::sdk_id() },
-                { "i", fmt::format("{}/{}", session_->client_id_, session_->id_) },
-            };
             protocol::client_request<protocol::hello_request_body> hello_req;
             if (session_->origin_.options().enable_unordered_execution) {
                 hello_req.body().enable_unordered_execution();
@@ -147,7 +144,7 @@ class mcbp_session : public std::enable_shared_from_this<mcbp_session>
                 hello_req.body().enable_compression();
             }
             hello_req.opaque(session_->next_opaque());
-            hello_req.body().user_agent(utils::json::generate(user_agent));
+            hello_req.body().user_agent(generate_user_agent(session_->client_id_, session_->id_));
             LOG_DEBUG("{} user_agent={}, requested_features=[{}]",
                       session_->log_prefix_,
                       hello_req.body().user_agent(),
@@ -1378,4 +1375,5 @@ class mcbp_session : public std::enable_shared_from_this<mcbp_session>
     std::chrono::time_point<std::chrono::steady_clock> last_active_{};
     diag::endpoint_state state_{ diag::endpoint_state::disconnected };
 };
+
 } // namespace couchbase::io
