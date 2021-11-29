@@ -42,6 +42,65 @@ static std::shared_ptr<spdlog::logger> file_logger;
 
 namespace couchbase::logger
 {
+spdlog::level::level_enum
+translate_level(level level)
+{
+    switch (level) {
+        case level::trace:
+            return spdlog::level::level_enum::trace;
+        case level::debug:
+            return spdlog::level::level_enum::debug;
+        case level::info:
+            return spdlog::level::level_enum::info;
+        case level::warn:
+            return spdlog::level::level_enum::warn;
+        case level::err:
+            return spdlog::level::level_enum::err;
+        case level::critical:
+            return spdlog::level::level_enum::critical;
+        case level::off:
+            return spdlog::level::level_enum::off;
+    }
+    return spdlog::level::level_enum::trace;
+}
+
+level
+level_from_str(const std::string& str)
+{
+    auto level = spdlog::level::from_str(str);
+    switch (level) {
+        case spdlog::level::level_enum::trace:
+            return level::trace;
+        case spdlog::level::level_enum::debug:
+            return level::debug;
+        case spdlog::level::level_enum::info:
+            return level::info;
+        case spdlog::level::level_enum::warn:
+            return level::warn;
+        case spdlog::level::level_enum::err:
+            return level::err;
+        case spdlog::level::level_enum::critical:
+            return level::critical;
+        case spdlog::level::level_enum::off:
+            return level::off;
+        default:
+            // return highest level if we don't understand
+            return level::trace;
+    }
+}
+
+bool
+should_log(level lvl)
+{
+    return file_logger->should_log(translate_level(lvl));
+}
+
+void
+log(level lvl, std::string_view msg)
+{
+    return file_logger->log(translate_level(lvl), msg);
+}
+
 void
 flush()
 {
@@ -158,7 +217,7 @@ create_file_logger(const configuration& logger_settings)
         }
 
         file_logger->set_pattern(log_pattern);
-        file_logger->set_level(logger_settings.log_level);
+        file_logger->set_level(translate_level(logger_settings.log_level));
 
         // Set the flushing interval policy
         spdlog::flush_every(std::chrono::seconds(1));
