@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638300038055,
+  "lastUpdate": 1638300083854,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -955,6 +955,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 352.275,
             "range": "± 69.0367",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "88a6a4cf3ed666f927f3c592f54ef55cf461b7cc",
+          "message": "Skip group and query index management tests on older server versions (#64)",
+          "timestamp": "2021-11-30T19:01:38Z",
+          "tree_id": "4bc23b69aa99d4835c0c74abdc3a156632ca6a39",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/88a6a4cf3ed666f927f3c592f54ef55cf461b7cc"
+        },
+        "date": 1638300082532,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 343.674,
+            "range": "± 61.8847",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
