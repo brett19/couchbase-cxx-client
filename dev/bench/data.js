@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638300431335,
+  "lastUpdate": 1638362092666,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1017,6 +1017,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 529.907,
             "range": "± 163.011",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "437e0e7b822de574f2e2c29b101aa20ac0d01952",
+          "message": "Fix live cluster version parse (#72)\n\nCluster version appends -edition. Account for this and parse it so we can test community edition\r\nFix neo version to apply to all future versions",
+          "timestamp": "2021-12-01T12:12:21Z",
+          "tree_id": "6d50d3b4994a80955f7a2bd2665c5bfe5fd20c42",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/437e0e7b822de574f2e2c29b101aa20ac0d01952"
+        },
+        "date": 1638362091503,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 534.194,
+            "range": "± 364.699",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
