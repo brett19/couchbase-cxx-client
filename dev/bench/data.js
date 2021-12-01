@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638380696973,
+  "lastUpdate": 1638382017508,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -2224,6 +2224,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 317.677,
             "range": "± 46.872",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4a8276bc7069db464d3d48f9c2a733d1ce6028fa",
+          "message": "CXXCBC-19: handle rate and quota limit error codes (#71)",
+          "timestamp": "2021-12-01T17:47:27Z",
+          "tree_id": "d81b4b961a9436c87f745214ac34562ded7882a4",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/4a8276bc7069db464d3d48f9c2a733d1ce6028fa"
+        },
+        "date": 1638382016169,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 380.738,
+            "range": "± 174.551",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
