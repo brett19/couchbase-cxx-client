@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638386963599,
+  "lastUpdate": 1638387175188,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1141,6 +1141,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 511.932,
             "range": "± 93.2059",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f3b8e098a650d09bd127cb38a5fd5024af07649e",
+          "message": "CXXCBC-29: add test for storage backend with ephemeral bucket (#73)",
+          "timestamp": "2021-12-01T19:09:05Z",
+          "tree_id": "252130d71c3af986fa9a7f2f11ddcc18323327ba",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/f3b8e098a650d09bd127cb38a5fd5024af07649e"
+        },
+        "date": 1638387174495,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 548.766,
+            "range": "± 453.371",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
