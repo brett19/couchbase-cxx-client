@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638377399052,
+  "lastUpdate": 1638380270146,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -2162,6 +2162,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 405.833,
             "range": "± 41.6897",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5fb2a7b3ecfaa6255adcb7993b786499cb1548a6",
+          "message": "CXXCBC-29: add storage option for bucket manager (#68)",
+          "timestamp": "2021-12-01T17:20:32Z",
+          "tree_id": "f632e3abde452b9237e1e11f03cc2872019ddd88",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/5fb2a7b3ecfaa6255adcb7993b786499cb1548a6"
+        },
+        "date": 1638380269104,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 317.677,
+            "range": "± 46.872",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
