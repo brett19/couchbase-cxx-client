@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638377298293,
+  "lastUpdate": 1638377399052,
   "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -2131,6 +2131,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 561.108,
             "range": "± 364.986",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "43e1df046ae7b646f4c22cb2e23dc0d2d73e8170",
+          "message": " SDKQE-2500: Add analytics management integration tests (#70)\n\n* Fix if not exists clause order in analytics_index_create\r\n\r\n* Fix compound dataverse name in analytics_index_create\r\n\r\n* Fix path_escape by using the correct encoding type\r\n\r\n* Fix parameter encoding in analytics_link_get_all\r\n\r\n* SDKQE-2500: Add analytics management integration tests\r\n\r\n* CXXCBC-49: always cancel command timers when invoking handlers\r\n\r\n* More version fixes.\r\n\r\nSupport cluster describe on older versions, skip nodeUUID.\r\nOpen bucket if cluster describe fails with service_not_available in load_cluster_info.\r\nAdd more feature flags for analytics\r\n\r\n* do not use 'this' pointer on deleted handler\r\n\r\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2021-12-01T16:29:42Z",
+          "tree_id": "4ce60114cfecf11f95751b19a9f9145338ca0006",
+          "url": "https://github.com/couchbaselabs/couchbase-cxx-client/commit/43e1df046ae7b646f4c22cb2e23dc0d2d73e8170"
+        },
+        "date": 1638377398158,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 405.833,
+            "range": "± 41.6897",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
