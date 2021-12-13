@@ -24,6 +24,8 @@
 #include <couchbase/operations/management/analytics.hxx>
 #include <couchbase/operations/management/analytics_link.hxx>
 
+#include <couchbase/utils/json.hxx>
+
 TEST_CASE("integration: bucket management", "[integration]")
 {
     test::utils::integration_test_guard integration;

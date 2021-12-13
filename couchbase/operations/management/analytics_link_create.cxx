@@ -25,22 +25,10 @@
 
 namespace couchbase::operations::management
 {
-std::error_code
-analytics_link_create_request::encode_to(encoded_request_type& encoded, http_context& /* context */) const
+namespace details
 {
-    if (std::error_code ec = link.validate(); ec) {
-        return ec;
-    }
-    encoded.headers["content-type"] = "application/x-www-form-urlencoded";
-    encoded.headers["accept"] = "application/json";
-    encoded.method = "POST";
-    encoded.path = analytics_link::endpoint_from_link(link);
-    encoded.body = link.encode();
-    return {};
-}
-
 analytics_link_create_response
-analytics_link_create_request::make_response(error_context::http&& ctx, const encoded_response_type& encoded) const
+make_analytics_link_create_response(error_context::http&& ctx, const io::http_response& encoded)
 {
     management::analytics_link_create_response response{ std::move(ctx) };
     if (!response.ctx.ec) {
@@ -96,4 +84,5 @@ analytics_link_create_request::make_response(error_context::http&& ctx, const en
     }
     return response;
 }
+} // namespace details
 } // namespace couchbase::operations::management

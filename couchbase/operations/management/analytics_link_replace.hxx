@@ -25,6 +25,8 @@
 
 #include <couchbase/error_context/http.hxx>
 
+#include <couchbase/operations/management/analytics_link.hxx>
+
 namespace couchbase::operations::management
 {
 struct analytics_link_replace_response {
@@ -37,6 +39,12 @@ struct analytics_link_replace_response {
     std::string status{};
     std::vector<problem> errors{};
 };
+
+namespace details
+{
+analytics_link_replace_response
+make_analytics_link_replace_response(error_context::http&& ctx, const io::http_response& encoded);
+} // namespace details
 
 template<typename analytics_link_type>
 struct analytics_link_replace_request {
@@ -52,9 +60,22 @@ struct analytics_link_replace_request {
 
     analytics_link_type link{};
 
-    [[nodiscard]] std::error_code encode_to(encoded_request_type& encoded, http_context& /* context */) const;
+    [[nodiscard]] std::error_code encode_to(encoded_request_type& encoded, http_context& /* context */) const
+    {
+        if (std::error_code ec = link.validate()) {
+            return ec;
+        }
+        encoded.headers["content-type"] = "application/x-www-form-urlencoded";
+        encoded.headers["accept"] = "application/json";
+        encoded.method = "PUT";
+        encoded.path = analytics_link::endpoint_from_link(link);
+        encoded.body = link.encode();
+        return {};
+    }
 
-    [[nodiscard]] management::analytics_link_replace_response make_response(error_context::http&& ctx,
-                                                                            const encoded_response_type& encoded) const;
+    [[nodiscard]] analytics_link_replace_response make_response(error_context::http&& ctx, const encoded_response_type& encoded) const
+    {
+        return details::make_analytics_link_replace_response(std::move(ctx), encoded);
+    }
 };
 } // namespace couchbase::operations::management

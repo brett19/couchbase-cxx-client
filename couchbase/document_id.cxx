@@ -15,6 +15,8 @@
  *   limitations under the License.
  */
 
+#include <algorithm>
+
 #include <spdlog/fmt/bundled/core.h>
 
 #include <couchbase/document_id.hxx>

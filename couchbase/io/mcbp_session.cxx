@@ -19,6 +19,8 @@
 
 #include <couchbase/io/mcbp_session.hxx>
 
+#include <spdlog/fmt/bundled/core.h>
+
 namespace couchbase::io
 {
 

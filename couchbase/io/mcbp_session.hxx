@@ -20,6 +20,8 @@
 #include <utility>
 #include <cstring>
 
+#include <cxx_function.hpp>
+
 #include <asio.hpp>
 
 #include <couchbase/platform/uuid.h>

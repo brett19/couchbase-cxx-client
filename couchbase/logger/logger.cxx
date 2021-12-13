@@ -293,8 +293,9 @@ unregister_spdlog_logger(const std::string& n)
 }
 
 bool
-check_log_levels(spdlog::level::level_enum level)
+check_log_levels(level lvl)
 {
+    auto level = translate_level(lvl);
     bool correct = true;
     spdlog::apply_all([level, &correct](std::shared_ptr<spdlog::logger> l) {
         if (l->level() != level) {
@@ -305,8 +306,9 @@ check_log_levels(spdlog::level::level_enum level)
 }
 
 void
-set_log_levels(spdlog::level::level_enum level)
+set_log_levels(level lvl)
 {
+    auto level = translate_level(lvl);
     // Apply the function to each registered spdlog::logger
     spdlog::apply_all([level](std::shared_ptr<spdlog::logger> l) {
         try {
