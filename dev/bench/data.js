@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638387175188,
-  "repoUrl": "https://github.com/couchbaselabs/couchbase-cxx-client",
+  "lastUpdate": 1644537727102,
+  "repoUrl": "https://github.com/brett19/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
       {
@@ -1172,6 +1172,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 548.766,
             "range": "± 453.371",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "brett19@gmail.com",
+            "name": "Brett Lawson",
+            "username": "brett19"
+          },
+          "committer": {
+            "email": "brett19@gmail.com",
+            "name": "Brett Lawson",
+            "username": "brett19"
+          },
+          "distinct": true,
+          "id": "88ae2615a111bb4de909db4a9edfae767fb46793",
+          "message": "Switch back to cxx_function to avoid copyable trait problems.",
+          "timestamp": "2022-02-10T15:41:11-08:00",
+          "tree_id": "f288c9426dce390626c8311779cbe3118035f0fc",
+          "url": "https://github.com/brett19/couchbase-cxx-client/commit/88ae2615a111bb4de909db4a9edfae767fb46793"
+        },
+        "date": 1644537726617,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 368.925,
+            "range": "± 156.488",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
