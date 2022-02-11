@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1644607610043,
+  "lastUpdate": 1644610151503,
   "repoUrl": "https://github.com/brett19/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1420,6 +1420,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 359.445,
             "range": "± 128.912",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "brett19@gmail.com",
+            "name": "Brett Lawson",
+            "username": "brett19"
+          },
+          "committer": {
+            "email": "brett19@gmail.com",
+            "name": "Brett Lawson",
+            "username": "brett19"
+          },
+          "distinct": true,
+          "id": "fe25246dc7d66f9eaf2478ef440123b15aab857e",
+          "message": "Fixed issue with http sessions being moved before send completion.",
+          "timestamp": "2022-02-11T11:53:26-08:00",
+          "tree_id": "fa22b7bf04cda8dfe0831f7b9a2cb0380cf237b1",
+          "url": "https://github.com/brett19/couchbase-cxx-client/commit/fe25246dc7d66f9eaf2478ef440123b15aab857e"
+        },
+        "date": 1644610150959,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 350.24,
+            "range": "± 47.1457",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
