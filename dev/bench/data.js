@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1644607477340,
+  "lastUpdate": 1644607610043,
   "repoUrl": "https://github.com/brett19/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -2815,6 +2815,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 496.456,
             "range": "± 255.493",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "brett19@gmail.com",
+            "name": "Brett Lawson",
+            "username": "brett19"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6533348c57e903964898da2ab47ea1487aacec4e",
+          "message": "Fixed bootstrapping to support non-copyable handlers. (#146)\n\n* Fixed additional methods to support non-copyable handlers.\r\n\r\n* Workaround copyability problem for movable_function.\r\n\r\n* use easier-to-remember env var for test logger\r\n\r\n* Disable construction of cluster object on the stack\r\n\r\n    Force to use std::shared_ptr to prolong life time of the cluster until\r\n    all operations are properly completed\r\n\r\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2022-02-11T18:45:08Z",
+          "tree_id": "fd6d3a4b9e446ea4e94036ef5fd7745aa969700b",
+          "url": "https://github.com/brett19/couchbase-cxx-client/commit/6533348c57e903964898da2ab47ea1487aacec4e"
+        },
+        "date": 1644607609505,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 441.948,
+            "range": "± 272.8",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
