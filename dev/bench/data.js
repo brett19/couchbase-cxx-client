@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1644597609654,
+  "lastUpdate": 1644597610496,
   "repoUrl": "https://github.com/brett19/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -2753,6 +2753,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 383.692,
             "range": "± 62.1331",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "distinct": true,
+          "id": "4e19e6e23e9b8c4f49245ffb1682873e4619d0f7",
+          "message": "Disable construction of cluster object on the stack\n\n    Force to use std::shared_ptr to prolong life time of the cluster until\n    all operations are properly completed",
+          "timestamp": "2022-02-11T19:20:42+03:00",
+          "tree_id": "fd6d3a4b9e446ea4e94036ef5fd7745aa969700b",
+          "url": "https://github.com/brett19/couchbase-cxx-client/commit/4e19e6e23e9b8c4f49245ffb1682873e4619d0f7"
+        },
+        "date": 1644597609018,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 496.456,
+            "range": "± 255.493",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
