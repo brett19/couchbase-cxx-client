@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1644615056303,
+  "lastUpdate": 1644864898518,
   "repoUrl": "https://github.com/brett19/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -1513,6 +1513,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 396.574,
             "range": "± 89.774",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "brett19@gmail.com",
+            "name": "Brett Lawson",
+            "username": "brett19"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "dddd81e1abbd095e66743c9c7a7c878891c6dcde",
+          "message": "Fix windows compiler warning in dirutils. (#149)",
+          "timestamp": "2022-02-11T13:59:59-08:00",
+          "tree_id": "a29bb30eca9769658bdcc8adc3dadb6853911b5f",
+          "url": "https://github.com/brett19/couchbase-cxx-client/commit/dddd81e1abbd095e66743c9c7a7c878891c6dcde"
+        },
+        "date": 1644864897966,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 392.717,
+            "range": "± 327.43",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
