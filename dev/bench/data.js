@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1644864953937,
+  "lastUpdate": 1644869008949,
   "repoUrl": "https://github.com/brett19/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -3094,6 +3094,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 351.593,
             "range": "± 79.755",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "brett19@gmail.com",
+            "name": "Brett Lawson",
+            "username": "brett19"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "517fe129b5fa15b4a82ae7d4f1dbb63e438f230b",
+          "message": "Fix issue with Internal Compiler Error on VS 2019. (#152)",
+          "timestamp": "2022-02-14T11:46:48-08:00",
+          "tree_id": "03e405325aacbc729e4c89aa38fc32efe93c0c33",
+          "url": "https://github.com/brett19/couchbase-cxx-client/commit/517fe129b5fa15b4a82ae7d4f1dbb63e438f230b"
+        },
+        "date": 1644869007955,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 383.597,
+            "range": "± 78.0212",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
