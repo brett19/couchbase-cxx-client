@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1644952073392,
+  "lastUpdate": 1644952206383,
   "repoUrl": "https://github.com/brett19/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -3187,6 +3187,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 383.597,
             "range": "± 78.0212",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jake.rawsthorne@couchbase.com",
+            "name": "Jake Rawsthorne",
+            "username": "jrawsthorne"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "69dacfd050818a20e829a6714c27577868a13c8e",
+          "message": "Fix windows integration test crash (#154)\n\nCo-authored-by: Sergey Avseyev <sergey.avseyev@gmail.com>",
+          "timestamp": "2022-02-15T14:17:44Z",
+          "tree_id": "7556a48fb05673d688700b3cbb2130df859199b2",
+          "url": "https://github.com/brett19/couchbase-cxx-client/commit/69dacfd050818a20e829a6714c27577868a13c8e"
+        },
+        "date": 1644952205771,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 581.939,
+            "range": "± 208.434",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
