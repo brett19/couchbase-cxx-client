@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1644952206383,
+  "lastUpdate": 1645006325535,
   "repoUrl": "https://github.com/brett19/couchbase-cxx-client",
   "entries": {
     "Mad Hatter": [
@@ -3218,6 +3218,37 @@ window.BENCHMARK_DATA = {
             "name": "get",
             "value": 581.939,
             "range": "± 208.434",
+            "unit": "us",
+            "extra": "100 samples\n1 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sergey.avseyev@gmail.com",
+            "name": "Sergey Avseyev",
+            "username": "avsej"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0992b6f693366bb0481d3ebaed4f57bc8ef11882",
+          "message": "Fix config updates during rebalance (#150)\n\n* KV loader tool\r\n\r\n* CXXCBC-130, CXXCBC-58. Fix configuration updates during rebalance\r\n\r\n* cancel MCBP timers before invoking the callback\r\n\r\n* protect configuration\r\n\r\n* swap handler before invocation\r\n\r\n* use locks to access config in http_session_manager",
+          "timestamp": "2022-02-16T07:20:38Z",
+          "tree_id": "b9cda4a455bb481ac0ce2e4e9fa6c24d5c36f7f2",
+          "url": "https://github.com/brett19/couchbase-cxx-client/commit/0992b6f693366bb0481d3ebaed4f57bc8ef11882"
+        },
+        "date": 1645006324537,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "get",
+            "value": 405.962,
+            "range": "± 482.72",
             "unit": "us",
             "extra": "100 samples\n1 iterations"
           }
